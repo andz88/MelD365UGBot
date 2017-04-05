@@ -12,7 +12,7 @@ using System.Web;
 
 namespace Barhead.Innovation.Controllers
 {
-    [LuisModel("defab807-d129-4188-bd39-a1b6a71d2048", "63a196fab0ad49b0bf6fe03f50a80120")]
+    [LuisModel("YourLuisID", "YourLUISSubscriptionKey")]
     [Serializable]
     public class BhLuisDialog : LuisDialog<object>
     {
