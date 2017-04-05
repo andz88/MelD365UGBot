@@ -110,14 +110,12 @@ namespace Barhead.Innovation.Controllers
             var priority = await argument;
             caseDetail.Priority = priority;
             caseDetail.Title = $@"Issue logged by {caseDetail.CustomerName} at {DateTime.Now.ToShortDateString()}";
+            await context.PostAsync("Please give me few moments until I create a case for you.");
 
             var crmConnection = CrmDataConnection.GetOrgService();
 
             var caseNumber = "";
-
-            await context.PostAsync("Please give me few moments until I create a case for you.");
-
-            // Todo store the data in CRM.
+            // store the data in CRM.
             var caseId = CrmCase.CreateCase(caseDetail, crmConnection);
 
             caseNumber = CrmCase.GetCaseNumberById(caseId, crmConnection);
