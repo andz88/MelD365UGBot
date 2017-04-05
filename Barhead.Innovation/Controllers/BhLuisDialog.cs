@@ -115,6 +115,8 @@ namespace Barhead.Innovation.Controllers
 
             var caseNumber = "";
 
+            await context.PostAsync("Please give me few moments until I create a case for you.");
+
             // Todo store the data in CRM.
             var caseId = CrmCase.CreateCase(caseDetail, crmConnection);
 
@@ -226,7 +228,7 @@ namespace Barhead.Innovation.Controllers
             }
             else
             {
-                string message = $"Thanks for using Barhead Innovation Bot. Hope you have a great day!";
+                string message = $"Thanks for using Melbourne Dynamics 365 UG Bot. Hope you have a great day!";
                 await context.PostAsync(message);
                 context.Done<string>("conversation ended.");
             }

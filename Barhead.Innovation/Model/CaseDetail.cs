@@ -22,6 +22,6 @@ namespace Barhead.Innovation.Model
         Low = 3,
         Normal = 2,
         High = 1,
-        Critical = 0
+        Critical = 881840000
     }
 }
